@@ -1,0 +1,109 @@
+<!--
+  about.html
+  Purpose: Longer bio, timeline, education/experience.
+  Replace placeholders marked with <!-- REPLACE: ... --> 
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="About NAME — SHORT_BIO" />
+    <title>About — ME</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="theme-root" data-theme="light">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <div class="container site-header__inner">
+            <a class="site-brand" href="index.html">Diksha Mall</a>
+
+            <button class="nav-toggle" id="navToggleAbout" aria-controls="primaryNavAbout" aria-expanded="false"
+                aria-label="Open navigation">
+                <span class="nav-toggle__bars" aria-hidden="true"></span>
+            </button>
+
+            <nav id="primaryNavAbout" class="primary-nav" aria-label="Primary">
+                <ul class="primary-nav__list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html" aria-current="page">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><button class="theme-toggle" id="themeToggleAbout" aria-pressed="false">Dark</button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main" class="main">
+        <section class="about container reveal">
+            <h1 class="page-title">About Me</h1>
+
+            <div class="about__grid">
+                <div class="about__bio">
+                    <p class="lead">Hi, I'm Diksha Mall, a passionate developer who loves building clean, responsive, and user-friendly digital experiences.
+                    I enjoy turning ideas into functional web applications using modern technologies, and I’m constantly learning and
+                    improving my skills to create impactful solutions.</p>
+
+                    <h2>Education & Experience</h2>
+
+                    <div class="cards">
+                        <article class="card">
+                            <h3>B.Tech in Computer Science & Engineering - Galgotias University</h3>
+                            <p class="muted">2022 — Present</p>
+                            <p>A developer who enjoys turning ideas into simple, functional, and beautiful web experiences.</p>
+                        </article>
+
+                        <article class="card">
+                            <h3>Front-end Developer</h3>
+                            <p class="muted">2024 — present</p>
+                            <p>Focused on web development and human-computer interaction.</p>
+                        </article>
+                    </div>
+
+                    <a class="btn" href="assets/resume.pdf" download>Download Resume</a>
+                    <!-- REPLACE: assets/resume.pdf with your resume file -->
+                </div>
+
+                <!-- <aside class="about__aside">
+                    <div class="timeline">
+                        <h2>Timeline</h2>
+                        <ol class="timeline__list">
+                            <li class="timeline__item">
+                                <strong>2024</strong>
+                                <span>Promoted to Front-end Developer at Acme Co.</span>
+                            </li>
+                            <!-- REPLACE: Add more timeline items here -->
+                        <!-- </ol>
+                    </div>
+
+                    <div class="skill-cloud">
+                        <h2>Skills</h2>
+                        <ul class="skill-cloud__list">
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                            <li>Accessibility</li>
+                            <li>Performance</li>
+                        </ul>
+                    </div>
+                </aside> --> -->
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container site-footer__inner">
+            <p>© <span id="yearAbout"></span> NAME. <a href="https://github.com/USERNAME" target="_blank"
+                    rel="noopener noreferrer">GitHub</a></p>
+        </div>
+    </footer>
+
+    <script src="js/main.js" type="module"></script>
+</body>
+
+</html>

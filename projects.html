@@ -1,0 +1,64 @@
+<!--
+  projects.html
+  Purpose: Shows a dynamic grid of projects rendered from `js/main.js`.
+  Replace placeholders for images in /assets. Projects are defined in js/main.js.
+-->
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="Projects by NAME" />
+    <title>MY Projects</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="theme-root" data-theme="light">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <div class="container site-header__inner">
+            <a class="site-brand" href="index.html">DIKSHA MALL</a>
+
+            <button class="nav-toggle" id="navToggleProjects" aria-controls="primaryNavProjects" aria-expanded="false"
+                aria-label="Open navigation">
+                <span class="nav-toggle__bars" aria-hidden="true"></span>
+            </button>
+
+            <nav id="primaryNavProjects" class="primary-nav" aria-label="Primary">
+                <ul class="primary-nav__list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html" aria-current="page">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><button class="theme-toggle" id="themeToggleProjects" aria-pressed="false">Dark</button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main" class="main container">
+        <section class="projects reveal">
+            <h1 class="page-title">Projects</h1>
+            <p class="muted">Click through for demos and source.</p>
+
+            <div id="projectsGrid" class="projects-grid" aria-live="polite">
+                <!-- Project cards are injected by js/main.js from the projects array -->
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container site-footer__inner">
+            <p>© <span id="yearProjects"></span> diksha. <a href="https://github.com/diks-ha" target="_blank"
+                    rel="noopener noreferrer">GitHub</a></p>
+        </div>
+    </footer>
+
+    <script src="js/main.js" type="module"></script>
+</body>
+
+</html>

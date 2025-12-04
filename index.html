@@ -1,0 +1,114 @@
+<!--
+  index.html
+  Purpose: Home / landing page for the personal portfolio.
+  Replace placeholders marked with <!-- REPLACE: ... --> 
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="NAME — SHORT_BIO" />
+    <title>MY Protfolio Website</title>
+
+    <!-- Google Font (one external dependency) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="theme-root" data-theme="light">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <div class="container site-header__inner">
+            <a class="site-brand" href="index.html" aria-label="Homepage">DIKSHA MALL</a>
+
+            <button class="nav-toggle" id="navToggle" aria-controls="primaryNav" aria-expanded="false"
+                aria-label="Open navigation">
+                <span class="nav-toggle__bars" aria-hidden="true"></span>
+            </button>
+
+            <nav id="primaryNav" class="primary-nav" aria-label="Primary">
+                <ul class="primary-nav__list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><button class="theme-toggle" id="themeToggle" aria-pressed="false">Dark</button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main" class="main">
+        <section class="hero" id="hero">
+            <div class="hero__bg" aria-hidden="true"></div>
+
+            <div class="container hero__inner">
+                <div class="hero__card">
+                    <div class="hero__media">
+                        <img src="assets/profile.jpg" alt="Profile photo of NAME" class="profile-img" width="120"
+                            height="120">
+                        <!-- REPLACE: assets/profile.jpg with your profile image -->
+                    </div>
+
+                    <div class="hero__content">
+                        <h1 class="hero__title">Hi, I'm Diksha Mall.</h1>
+                        <p class="hero__tagline">A developer who loves building clean, responsive, and user-friendly web experiences.</p>
+
+                        <ul class="skill-list" aria-label="Key skills">
+                            <li class="skill-list__item">HTML</li>
+                            <li class="skill-list__item">CSS</li>
+                            <li class="skill-list__item">JavaScript</li>
+                            <li class="skill-list__item">Responsive Design</li>
+                            <li class="skill-list__item">Accessibility</li>
+                        </ul>
+
+                        <div class="hero__ctas">
+                            <a class="btn btn--primary" href="projects.html">View Projects</a>
+                            <a class="btn" href="contact.html">Contact</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="skills-preview container reveal" id="skills"><br>
+            <h2 class="section-title">SKILLS</h2>
+            <p class="muted">A quick snapshot of tools and technologies I use.</p>
+
+            <div class="skills-grid">
+                <div class="skill-card">HTML </div>
+                <div class="skill-card">CSS Grid &amp; Flexbox</div>
+                <div class="skill-card">JavaScript</div>
+                <div class="skill-card">SharePoint &amp; Power Apps &amp; Power Automate</div>
+                <div class="skill-card">Tooling (Git)</div>
+            </div>
+        </section><br>
+
+        <section class="projects-preview container reveal" id="projectsPreview"><br>
+            <h2 class="section-title">Selected Projects</h2>
+            <p class="muted">Check the Projects page for details.</p>
+
+            <div id="projectsPreviewGrid" class="projects-grid" >
+                <!-- Projects loaded dynamically by js/main.js -->
+            </div>
+            <div class="more-link">
+                <a href="projects.html" class="btn">See All Projects</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container site-footer__inner">
+            <p>© <span id="year"></span>diksha. <a href="https://github.com/diks-ha" target="_blank"
+                    rel="noopener noreferrer">GitHub</a> · <a href="https://www.linkedin.com/in/diksha-mall-649805271?"
+                    target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
+        </div>
+    </footer>
+
+    <script src="js/main.js" type="module"></script>
+</body>
+
+</html

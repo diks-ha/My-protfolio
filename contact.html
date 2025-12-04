@@ -1,0 +1,101 @@
+<!--
+  contact.html
+  Purpose: Contact form (client-side validation) and contact info.
+  Form uses mailto fallback and shows a success message on submit.
+-->
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="Contact NAME" />
+    <title>MY Contact </title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="theme-root" data-theme="light">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <div class="container site-header__inner">
+            <a class="site-brand" href="index.html">DIKSHA MALL</a>
+
+            <button class="nav-toggle" id="navToggleContact" aria-controls="primaryNavContact" aria-expanded="false"
+                aria-label="Open navigation">
+                <span class="nav-toggle__bars" aria-hidden="true"></span>
+            </button>
+
+            <nav id="primaryNavContact" class="primary-nav" aria-label="Primary">
+                <ul class="primary-nav__list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html" aria-current="page">Contact</a></li>
+                    <li><button class="theme-toggle" id="themeToggleContact" aria-pressed="false">Dark</button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main" class="main">
+        <section class="contact container reveal">
+            <h1 class="page-title">Get in touch</h1>
+            <p class="muted">Prefer email? Use the form or reach me directly.</p>
+
+            <div class="contact__grid">
+                <form id="contactForm" class="form" novalidate>
+                    <div class="form__row">
+                        <label for="name">Name</label>
+                        <input id="name" name="name" type="text" required aria-required="true">
+                        <span class="form__error" id="errorName" aria-live="polite"></span>
+                    </div>
+
+                    <div class="form__row">
+                        <label for="email">Email</label>
+                        <input id="email" name="email" type="email" required aria-required="true">
+                        <span class="form__error" id="errorEmail" aria-live="polite"></span>
+                    </div>
+
+                    <div class="form__row">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required aria-required="true"></textarea>
+                        <span class="form__error" id="errorMessage" aria-live="polite"></span>
+                    </div>
+
+                    <div class="form__actions">
+                        <button type="submit" class="btn btn--primary">Send Message</button>
+                        <button type="button" id="contactMailFallback" class="btn">Open mail client</button>
+                    </div>
+
+                    <div id="formSuccess" class="form__success" role="status" aria-live="polite" hidden>
+                        Thanks — your message was prepared. If your mail client didn't open, copy this email: <a
+                            href="mailto:EMAIL@EXAMPLE.COM">dikshamall853@gmail.com</a>
+                        <!-- REPLACE: EMAIL@EXAMPLE.COM with your email -->
+                    </div>
+                </form>
+
+                <aside class="contact__info">
+                    <h2>Contact Info</h2>
+                    <p>Email: <a href="mailto:EMAIL@EXAMPLE.COM">dikshamall853@gmail.com</a></p>
+                    <p>GitHub: <a href="https://github.com/diks-ha" target="_blank"
+                            rel="noopener noreferrer">github.com/diks-ha</a></p>
+                    <p>LinkedIn: <a href="https://www.linkedin.com/in/diksha-mall-649805271?" target="_blank"
+                            rel="noopener noreferrer">linkedin.com/in/diksha-mall-649805271?</a></p>
+                </aside>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container site-footer__inner">
+            <p>© <span id="yearContact"></span> diksha.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js" type="module"></script>
+</body>
+
+</html>
